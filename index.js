@@ -3148,6 +3148,10 @@ const data = {
 // Middleware to parse JSON
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.send('Welcome to the E-commerce API!');
+});
+
 // Endpoints
 app.get('/products', (req, res) => res.json(data.products));
 app.get('/brands', (req, res) => res.json(data.brands));
